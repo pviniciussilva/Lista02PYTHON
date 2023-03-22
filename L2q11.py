@@ -28,4 +28,4 @@ elif salario_colaborador >= 1500:
     print(f'O salário antes do reajuste: R${salario_colaborador:,.2f}')
     print(f'O percentual de aumento aplicado foi de: {(5/100):,.2f}%')
     print(f'O valor do aumento: R${((5/100) * salario_colaborador):,.2f}')
-    print(f'O novo salário, após o aumento: {aumento_de_5:,.2f}')
+    print(f'O novo salário, após o aumento: R${aumento_de_5:,.2f}')
