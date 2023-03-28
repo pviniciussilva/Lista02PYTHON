@@ -1,7 +1,6 @@
 '''Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.'''
 
 numero = int(input('Digite o número correspondente a o dia da semana: '))
-numero = str(input('Digite o número correspondente a o dia da semana: '))
 
 
 if numero == 1:
@@ -21,4 +20,4 @@ elif numero == 7:
 elif numero > 7 and numero < 0:
     print('Valor invalido!')
 
-print(f'O {dia} corresponde ao dia de {numero} na semana')
+print(f'O número {numero} corresponde ao dia de {dia} na semana')
