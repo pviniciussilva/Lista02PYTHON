@@ -30,24 +30,24 @@ elif salario  >= 900 and salario <= 1500:
     INSS = 0
     FGTS = salario - ((11/100) * salario)
     salario_liquido = salario - (((10/100) + (5/100)) * salario)
-    total_descontos = ((IR + salario) + salario ) - salario
+    total_descontos = (salario - IR) - INSS 
 elif salario >= 1501 and salario <= 2500:
     IR = 0
     INSS = salario - ((10/100) * salario)
     FGTS = salario - ((11/100) * salario)
     salario_liquido = salario - (((10/100) + (5/100)) * salario)
-    total_descontos = ((IR + salario) + salario ) - salario
+    total_descontos = (salario - IR) - INSS
 elif salario >= 2500:
     IR = 0
-    INSS = salario - ((10/100) * salario) 
+    INSS = 0 
     desconto = salario - ((20/100) * salario)
     FGTS = salario - ((11/100) * salario)
     salario_liquido = salario - (((10/100) + (5/100)) * salario)
-    total_descontos =  ((IR + salario) + salario ) - salario
+    total_descontos =  ((salario - IR) - INSS) - desconto
 
-print(f'Salário Bruto: ({quantidade_horas_trabalho:,.2f} * {valor_hora:,.2f})               : R${salario:.2f}')
-print(f'IR (5%)                     : R${IR}')
-print(f'INSS ( 10%)                 : R${INSS}')
+print(f'Salário Bruto: ({quantidade_horas_trabalho:.2f} * {valor_hora:.2f})               : R${salario:.2f}')
+print(f'IR (5%)                         : R${IR}')
+print(f'INSS ( 10%)                     : R${INSS}')
 print(f'FGTS (11%)                      : R${FGTS}')
 print(f'Total de descontos              : R${total_descontos}')
 print(f'Salário Liquido                 : R${salario_liquido}')
