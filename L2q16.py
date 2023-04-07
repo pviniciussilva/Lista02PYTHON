@@ -14,16 +14,14 @@ print('ax2 + bx + c.')
 a = float(input('Informe o valor de "a": '))
 b = float(input('Informe o valor de "b": '))
 c = float(input('Informe o valor de "c": '))
-dela = b ** 2 - 4 * a * c
-x = (-(-b) + dela ** (1/2)) / 2 *a
+delta = b ** 2 - 4 * a * c
+x1 = (-(-b) + delta ** (1/2)) / 2 * a
+x2 = (-(-b) - delta ** (1/2)) / 2 * a
 
-if  a > 0:
-    equaçao = True
-#   if equaçao == True:
-        
-else:
-    equaçao = False
-
-    
-    
-print(f'{equaçao}')
+if x1 == 0:
+    x = x1
+elif x2 == 0:
+    x = x2
+elif a < 0:
+    print('O valor informado à "a" não é válido, a equação não é uma equação de segundo grau') 
+print(f'{x}')
